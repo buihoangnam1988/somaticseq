@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import datetime
 import argparse, os, subprocess, logging
 import somaticseq.combine_callers as combineCallers
 from somaticseq._version import  __version__
