@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 import datetime
+import somaticseq.somatic_vcf2tsv as somatic_vcf2tsv
+import somaticseq.SSeq_tsv2vcf as tsv2vcf
 import argparse, os, subprocess, logging
 import somaticseq.combine_callers as combineCallers
 from somaticseq._version import  __version__
@@ -106,9 +108,6 @@ def runPaired(outdir, ref, tbam, nbam, tumor_name='TUMOR', normal_name='NORMAL',
     if features_excluded is None: features_excluded = []
     if arb_snvs is None: arb_snvs = []
     if arb_indels is None: arb_indels = []
-
-    import somaticseq.somatic_vcf2tsv as somatic_vcf2tsv
-    import somaticseq.SSeq_tsv2vcf as tsv2vcf
 
     files_to_delete = set()
 
